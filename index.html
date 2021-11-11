@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#323232">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./img/logo1.png">
+    <link rel="apple-touch-startup-image" href="./img/logo1.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/14438bc8f4.js" crossorigin="anonymous"></script>
+    <script defer src="./index.js"></script>
+    <title>BEIZIK</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#inicio" class="logo">
+                <img id="imgLogo" src="./img/logo1.png">
+            </a>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="#inicio" class="nav-menu-link nav-link a-inicio">Inicio</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#productos" class="nav-menu-link nav-link a-productos">Productos</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#contactanos" class="nav-menu-link nav-link">Contáctanos</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#sobre" class="nav-menu-link nav-link">Quiénes Somos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sections">
+        <article id="inicio">
+            <div class="portada-inicio">
+                <div class="gradient-portada-inicio"></div>
+                <div class="container-details-inicio">
+                    <div class="details-inicio">
+                        <h3>Tienda Virtual BEIZIK</h3>
+                        <p>Un estilo simple, pero fresco...</p>
+                        <p>Descubre todo lo que tenemos para ti.</p>
+                        <a href="#productos" class="boton-portada">Descubrir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cuerpo-inicio">
+                <div class="grid-stock-inicio">
+                    <h2>Te ofrecemos:</h2>
+                    <div class="stock-inicio">
+                        <div>
+                            <div>
+                                <img src="./img/shirt.PNG" class="stock">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="./img/cap.PNG" class="stock">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="./img/jogger.PNG" class="stock">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="./img/snowcap.PNG" class="stock">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="productos">
+            <p>Productos</p>
+        </article>
+        <article id="contactanos">
+            <p>Contáctanos</p>
+        </article>
+        <article id="sobre">
+            <p>Quiénes Somos</p>
+        </article>
+    </div>
+</body>
+
+</html>

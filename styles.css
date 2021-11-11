@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.header{
+    background-color: #323232;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    padding: 0;
+    line-height: 60px;
+}
+
+#imgLogo{
+    margin: 15px 0;
+    margin-left: 10%;
+    height: 30px;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    line-height: 60px;
+    width: max-content;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active{
+    background-color: white;
+    color: #323232;
+    transition: 0.5s;
+}
+
+.active{
+    background-color: white;
+    color: #323232;
+}
+
+.nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    line-height: 50px;
+    display: none;
+}
+
+#inicio{
+    background-color: #323232;
+}
+
+.portada-inicio{
+    width: 100%;
+    height: 400px;
+    background-image: url(./img/portadaInicio.jpg);
+    background-size: 100%;
+    animation: move 10s infinite linear alternate;
+    position: relative;
+}
+
+@keyframes move {
+    from{
+        background-position: bottom right;
+    }to{
+        background-position: top left;
+    }
+}
+
+.gradient-portada-inicio{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, white);
+    opacity: 0.5;
+}
+
+.container-details-inicio{
+    position: relative;
+}
+
+.details-inicio{
+    width: 100%;
+    padding-top: 96px;
+    padding-left: 5%;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.boton-portada{
+    background-color: white;
+    color: #323232;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.boton-portada:hover{
+    background-color: #323232;
+    color: white;
+}
+
+.grid-stock-inicio h2{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.stock-inicio{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 64px;
+}
+
+.stock-inicio div{
+    background: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    height: 400px;
+}
+
+.stock{
+    height: 56%;
+    margin: 20px;
+}
+
+.stock-parrafo{
+    margin-top: 300px;
+}
+
+@media (max-width: 1000px){
+    .stock-inicio{
+        grid-template-columns: 48% 48%;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header{
+        background-color: #323232;
+        height: 50px;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .logo{
+        padding: 0;
+        line-height: 50px;
+    }
+    
+    #imgLogo{
+        height: 24px;
+    }
+
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        list-style: none;
+        background-color: #161616;
+        position: fixed;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 50px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .nav-menu-item{
+        font-size: 18px;
+        line-height: 80px;
+    }
+    
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        background: none;
+        color: #606060;
+    }
+
+    .nav-toggle{
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+    }
+
+    .portada-inicio{
+        width: 100%;
+        background-size: 180%;
+        right: 0%;
+        transition: right 0.3s;
+    }
+
+    .hide-portada{
+        right: 100%;
+    }
+
+    .details-inicio{
+        max-width: 365px;
+        font-size: 24px;
+        padding-top: 200px;
+    }
+
+    .stock-inicio{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .stock{
+        height: 56%;
+    }
+
+    .stock-inicio div{
+        height: 230px;
+    }
+}
+
+
+
+@media (max-width: 320px){
+    .portada-inicio{
+        width: 100%;
+        background-size: 230%;
+    }
+
+    .stock-inicio{
+        grid-template-columns: 98%;
+    }
+
+    .stock{
+        height: 64%;
+    }
+}
